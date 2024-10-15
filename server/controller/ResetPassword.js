@@ -29,7 +29,7 @@ exports.resetPasswordToken=async(req,res)=>{
                                                         {new:true}
         );
     //create url
-const url=`http://localhost:3000/update-password/${token}`
+const url=`https://dev-sphere-frontend.vercel.app/${token}`
     //send mail containing url
         await mailSender(email,"Password reset Link",`Password reset Link:- ${url}`)
     //return response
