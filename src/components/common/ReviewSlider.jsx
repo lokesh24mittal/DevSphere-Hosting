@@ -72,7 +72,7 @@ export default function ReviewSlider() {
                                         </h3>
                                         <ReactStars
                                     count={5}
-                                    value={review.rating.toFixed(1)}
+                                    value={review.rating}
                                     size={20}
                                     edit={false}
                                     activeColor={"#ffd700"}

@@ -94,10 +94,10 @@ export default function About() {
       {/* <section className='relatie mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between */}
       {/* gap-8 bg-richblack-900 text-white' > */}
 
-        <h1 className='text-center text-4xl font-semibold mt-8 text-white'>
+        <h1 className='text-center text-4xl font-semibold hidden md:block mt-8 text-white'>
           Reviews from other learners
         </h1>
-        <div>
+        <div className="hidden md:block">
           <ReviewSlider/>
         </div>
 
