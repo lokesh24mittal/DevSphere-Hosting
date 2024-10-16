@@ -168,12 +168,12 @@ export default function Home() {
             {/* section3 */}
             <div className="relative mx-auto my-20  flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
                     <InstructorSection />
-                    <div className="md:block hidden">
-                    <h1 className="text-center text-4xl font-semibold mt-8 ">Review from other Learners</h1>
+                    {/* <div className="md:block hidden"> */}
+                    {/* <h1 className="text-center text-4xl font-semibold mt-8 ">Review from other Learners</h1> */}
                     {/* Review sliders here */}
                     
-                    <ReviewSlider/>
-                    </div>
+                    {/* <ReviewSlider/> */}
+                    {/* </div> */}
             </div>
 
             {/* <div className="bg-richblack-800 mt-10"> */}

@@ -38,20 +38,32 @@ export default function VerifyEmail() {
                " Loading..."
             ):
             (
-                <div >
+                <div className="p-2">
                     <h1 className='font-bold text-2xl text-richblack-5 mb-3'>Verify Email</h1>
                     <p className='text-richblack-400 mb-3'>A verification code has been sent to you. Enter the code below</p>
                     <form onSubmit={handleOnSubmit}>
-
                        <OTPInput
                        value={otp}
                        onChange={setOtp}
                        numInputs={6}
-                       renderInput={(props)=><input {...props} className='bg-richblack-600 h-20' placeholder='-'/>
-                    }
+                       renderInput={(props)=>(
+                       <input
+                        {...props}
+                        style={{
+                            boxShadow:"inset 0px -1px 0px rgba(255,255,255,0.18)"
+                        }}
+                         className='w-[48px] lg:w-[60px] border-0 bg-richblack-800 rounded-[0.5rem] text-richblack-5
+                         aspect-square text-center focus:border-0 focus:outline-2 focus:outline-yellow-50'
+                         placeholder='-'
+                         />
+                        )}
+                        containerStyle={{
+                            justifyContent:"space-between",
+                            gap:"0 6px",
+                        }}
                        />
 
-                       <button className='bg-yellow-50 rounded-[8px] w-full font-medium text-richblack-800 px-[12px] py-[8px] mt-2'
+                       <button className=' bg-yellow-50 rounded-[8px] w-full font-medium text-richblack-800 px-[12px] py-[8px] mt-6'
                         type='submit'>
                         Verify Email
                        </button>

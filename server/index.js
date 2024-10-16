@@ -27,7 +27,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
+        //for deployment
         origin:"https://dev-sphere-frontend.vercel.app",
+        // for localhost
+        // origin:"http://localhost:3000",
         credentials:true
     })
 );

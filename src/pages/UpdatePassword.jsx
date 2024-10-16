@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { resetPassword } from '../services/operations/authAPI';
 import { BiArrowBack } from 'react-icons/bi';
 
@@ -15,6 +15,7 @@ const location=useLocation();
     const [showPassword, setShowPassword]=useState(false);
     const[showconfirmPassword,setShowconfirmPassword]=useState(false);
     const{loading} =useSelector((state)=>state.auth);
+    const navigate=useNavigate();
 
 const {password,confirmPassword}=formData;
 
@@ -30,7 +31,7 @@ const {password,confirmPassword}=formData;
     const handleOnSubmit=(e)=>{
         e.preventDefault();
         const token=location.pathname.split("/").at(-1);
-        dispatch(resetPassword(password,confirmPassword,token));
+        dispatch(resetPassword(password,confirmPassword,token,navigate));
     }
 
 

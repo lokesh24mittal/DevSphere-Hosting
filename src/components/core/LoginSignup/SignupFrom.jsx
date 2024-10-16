@@ -67,7 +67,7 @@ export default function SignupFrom() {
         </div>
 
         <form onSubmit={submitHandler} className='flex flex-col w-full gap-y-4 mt-6'>
-            <div className='flex flex-col lg:flex-row justify-between'>
+            <div className='flex flex-col gap-4 lg:flex-row justify-between'>
                 <label>
                 <p className='text-[1rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name<sup>*</sup></p>
                 <input type='text'
@@ -104,7 +104,7 @@ export default function SignupFrom() {
                     className='bg-richblack-800 rounded-[0.5rem] text-white w-full p-[12px]'
                 />
             </label>
-            <div className='flex justify-between flex-col lg:flex-row'>
+            <div className='flex justify-between gap-4 flex-col lg:flex-row'>
             <label className="relative">
                 <p className='text-[1rem] text-richblack-5 mb-1 leading-[1.375rem]'>Password<sup>*</sup></p>
                 <input type={`${showPassword ? ("text") : ("password")}`}
@@ -125,7 +125,7 @@ export default function SignupFrom() {
             </label>
 
             <label className="relative">
-                <p className='text-[1rem] text-richblack-5 mb-1 leading-[1.375rem]'>Comfirm Password<sup>*</sup></p>
+                <p className='text-[1rem]  text-richblack-5 mb-1  leading-[1.375rem]'>Comfirm Password<sup>*</sup></p>
                 <input type={`${showComfPassowrd ? ("text") : ("password")}`}
                     required
                     name="confirmPassword"
